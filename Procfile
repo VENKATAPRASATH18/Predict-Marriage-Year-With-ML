@@ -1,2 +1,2 @@
-web: python Flask_App.py -p $PORT
+web: gunicorn wsgi:Flask_App
 

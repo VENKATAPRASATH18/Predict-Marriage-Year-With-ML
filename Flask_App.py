@@ -1,4 +1,5 @@
 import flask
+import flask_cors
 from flask import request,render_template
 import joblib
 

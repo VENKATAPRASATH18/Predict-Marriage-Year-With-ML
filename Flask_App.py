@@ -13,7 +13,7 @@ CORS(F_app)
 def home():
    return render_template('Structure.html')
 
-@F_app.route('/predict',methods=['POST'])
+@F_app.route('/predict',methods=['GET'])
 def predict():
     
     model = joblib.load('age_prediction.ml')

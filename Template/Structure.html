@@ -211,7 +211,7 @@ input[type=text], select, textarea {
 	<script type="text/javascript">
 		$('#submit').click(function(event){    
 		  event.preventDefault();     
-		  var exist_response = $.ajax({type:"POST",url:'predict',data:"gender="+$('#gender').val()+"&height_cms="+$('#height_cms').val()+"&caste="+$('#caste').val()+"&religion="+$('#religion').val()+"&mother_tongue="+$('#mother_tongue').val()+"&country="+$('#country').val(),async: false}).responseText;
+		  var exist_response = $.ajax({type:"POST",url:"predict",data:"gender="+$('#gender').val()+"&height_cms="+$('#height_cms').val()+"&caste="+$('#caste').val()+"&religion="+$('#religion').val()+"&mother_tongue="+$('#mother_tongue').val()+"&country="+$('#country').val(),async: false}).responseText;
 		  $('#output').text(" Predicted Year of Your Marriage : "+ String(parseInt(exist_response.split(".")[0]) + parseInt($('#yob').val())));
 		});
 	</script>

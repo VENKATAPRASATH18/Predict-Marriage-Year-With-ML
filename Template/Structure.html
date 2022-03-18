@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Age of Marriage Prediction</title>
+	<meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Add a background color and some padding around the form */
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  .submit {
+  background-color: #bbc7e0; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+  </style>
+<body>
+<div class="container">
+    <form action="action_page.php">
+     
+      <label for="gender">Gender</label>
+      <select id="gender" name="gender">   
+         <option value="">Select Gender</option>
+         <option value="0">Female</option>
+        <option value="1">Male</option>
+      </select>
+
+      <label for="yob">Year of Birth</label>
+      <input type="text" id="yob" name="yob" required="" placeholder="Ex. YYYY"> 
+      
+      <label for="height_cms">Height</label>
+      <input  type="text" id="height_cms" name="height_cms" required="" placeholder="Height in cms">
+
+
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option value="">Select Country</option>
+							<option value="0">Australia</option>
+							<option value="1">Bahrain</option>
+							<option value="2">Bangladesh</option>
+							<option value="3">Canada</option>
+							<option value="4">Germany</option>
+							<option value="5">India</option>
+							<option value="6">Ireland</option>
+							<option value="7">Kuwait</option>
+							<option value="8">Malaysia</option>
+							<option value="9">Myanmar</option>
+							<option value="10">Netherlands</option>
+							<option value="11">New Zealand</option>
+							<option value="12">Norway</option>
+							<option value="13">Oman</option>
+							<option value="14">Pakistan</option>
+							<option value="15">Philippines</option>
+							<option value="16">Qatar</option>
+							<option value="17">Singapore</option>
+							<option value="18">South Africa</option>
+							<option value="19">USA</option>
+							<option value="20">United Arab Emirates</option>
+							<option value="21">United Kingdom</option>
+      </select>
+
+      <label for="religion">Religion</label>
+      <select id="religion" name="religion">   
+        <option value="">Select Religion</option>
+        <option value="0">Christian</option>
+        <option value="1">Hindu</option>
+        <option value="2">Jain</option>
+        <option value="3">Muslim</option>
+        <option value="4">Sikh</option>
+      </select>
+
+      <label for="mother_tongue">Mother Tongue</label>
+      <select id="mother_tongue" name="mother_tongue">
+        <option value="">Select Mother Tongue</option>
+        <option value="0">Aka</option>
+        <option value="1">Assamese</option>
+        <option value="2">Bengali</option>
+        <option value="3">Bhojpuri</option>
+        <option value="4">Chattisgarhi</option>
+        <option value="5">English</option>
+        <option value="6">Gujarati</option>
+        <option value="7">Haryanavi</option>
+        <option value="8">Hindi</option>
+        <option value="9">Kannada</option>
+        <option value="10">Kashmiri</option>
+        <option value="11">Konkani</option>
+        <option value="12">Kutchi</option>
+        <option value="13">Malayalam</option>
+        <option value="14">Manipuri</option>
+        <option value="15">Marathi</option>
+        <option value="16">Marwari</option>
+        <option value="17">Nepali</option>
+        <option value="18">Odia</option>
+        <option value="19">Other</option>
+        <option value="20">Punjabi</option>
+        <option value="21">Rajasthani</option>
+        <option value="22">Sindhi</option>
+        <option value="23">Tamil</option>
+        <option value="24">Telugu</option>
+        <option value="25">Tulu</option>
+        <option value="26">Urdu</option>
+      </select>
+
+      <label for="caste">Caste</label>
+      <select id="caste" name="caste">
+        <option value="">Select Caste</option>
+							<option value="0">Agarwal</option>
+							<option value="1">Agri</option>
+							<option value="2">Ahom</option>
+							<option value="3">Arora</option>
+							<option value="4">Arya Vysya</option>
+							<option value="5">Baidya</option>
+							<option value="6">Baishnab</option>
+							<option value="7">Baishya</option>
+							<option value="8">Balija</option>
+							<option value="9">Baniya</option>
+							<option value="10">Bhandari</option>
+							<option value="11">Bhatia</option>
+							<option value="12">Billava</option>
+							<option value="14">Brahmin</option>
+							<option value="14">Chowdhary</option>
+							<option value="15">Goud</option>
+							<option value="16">Gursikh</option>
+							<option value="17">Kaibarta</option>
+							<option value="18">Kalita</option>
+							<option value="19">Kamma</option>
+							<option value="19">Kapu</option>
+							<option value="19">Kayastha</option>
+							<option value="20">Khatri</option>
+							<option value="21">Kshatriya</option>
+							<option value="22">Lingayath</option>
+							<option value="23">Marthoma</option>
+							<option value="24">Memon</option>
+							<option value="24">Naidu</option>
+							<option value="25">OBC - Barber/Naayee</option>
+							<option value="26">Panchal</option>
+							<option value="27">Patel</option>
+							<option value="28">Reddy</option>
+							<option value="30">Roman Catholic</option>
+							<option value="29">Ramdasia</option>
+							<option value="30">Roman Catholic</option>
+							<option value="31">Sahu</option>
+							<option value="32">Saini</option>
+							<option value="33">Scheduled Caste (SC)</option>
+							<option value="34">Shwetamber</option>
+							<option value="35">Sindhi-Sakkhar</option>
+							<option value="36">Thakur</option>
+							<option value="37">Vaishnav</option>
+							<option value="38">Valmiki</option>
+							<option value="39">Vanniyar</option>
+							<option value="40">Viswabrahmin</option>
+							<option value="41">Yadava / Golla</option>
+							<option value="42">Others Castes</option>
+      </select>
+ <h2 id="output">Hello, let's make a prediction together</h2>
+      <div >
+        <div >
+            <div ></div>
+            <button id='submit' type="submit" value="Submit" style="background-color: #bbc7e0; padding: 15px 30px;
+            text-align: center; display: inline-block;
+  font-size: 16px;">Submit</button>
+        </div>
+    </div>
+    
+  
+      <!--<label for="subject">Subject</label>
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+  
+      <input type="submit" value="Submit"> -->
+      
+    </form>
+  </div>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$('#submit').click(function(event){    
+		  event.preventDefault();     
+		  var exist_response = $.ajax({type:"GET",url:"http://127.0.0.1:5000/predict",data:"gender="+$('#gender').val()+"&height_cms="+$('#height_cms').val()+"&caste="+$('#caste').val()+"&religion="+$('#religion').val()+"&mother_tongue="+$('#mother_tongue').val()+"&country="+$('#country').val(),async: false}).responseText;
+		  $('#output').text(" Predicted Year of Your Marriage : "+ String(parseInt(exist_response.split(".")[0]) + parseInt($('#yob').val())));
+		});
+	</script>
+</body>
+</html>

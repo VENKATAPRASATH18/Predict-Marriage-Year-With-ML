@@ -1,2 +1,2 @@
-web: gunicorn app:F_app
+web: gunicorn wsgi:Flask_App
 

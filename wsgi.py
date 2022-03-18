@@ -1,4 +1,4 @@
-from app.Flask_App import F_app
+from Flask_App import F_app
 import os 
 
 port = int(os.environ.get("PORT", 5000))
